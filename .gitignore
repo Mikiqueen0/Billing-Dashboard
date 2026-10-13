@@ -1,0 +1,78 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+# DATABASE_URL (Neon), auth secrets, etc. live here — never commit them.
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# business data — real products / costs / customer names stay off GitHub.
+# Put the shop's Excel files in /data (import source) and keep them local.
+/data/
+*.xlsx
+*.xls
+*.csv
+# ...except the blank import template the app offers for download
+!public/templates/*.xlsx
+!public/templates/*.csv
+
+# generated bills / reports / database dumps
+/exports/
+*.dump
+*.sql.gz
+*.sqlite
+*.db
+
+# logs
+*.log
+logs/
+
+# Windows / editors
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# claude code — personal overrides only (shared settings.json is committed)
+.claude/settings.local.json
+
+# temporary UX-audit probe scripts
+/public/__audit/
